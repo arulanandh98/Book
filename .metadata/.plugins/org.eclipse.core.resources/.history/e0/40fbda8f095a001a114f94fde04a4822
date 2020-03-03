@@ -1,0 +1,17 @@
+package com.commerce.model;
+
+public class User {
+
+	private Long userId;
+	private String name;
+	private String email;
+	private Long phone;
+	private boolean admin;
+	private String userName;
+	private String pass;
+	
+	
+	
+	
+	
+}

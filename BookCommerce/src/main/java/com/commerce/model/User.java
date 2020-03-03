@@ -1,0 +1,101 @@
+package com.commerce.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="user")
+public class User {
+
+	@Id
+	@Column(name="user_id")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long userId;
+	private String name;
+	private String email;
+	private int phone;
+	private boolean member;
+	private boolean admin;
+	private String pas;
+	private String usr;
+	public Long getUserId() {
+		return userId;
+	}
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public int getPhone() {
+		return phone;
+	}
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}
+	public boolean isMember() {
+		return member;
+	}
+	public void setMember(boolean member) {
+		this.member = member;
+	}
+	public boolean isAdmin() {
+		return admin;
+	}
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+	public String getPas() {
+		return pas;
+	}
+	public void setPas(String pas) {
+		this.pas = pas;
+	}
+	public String getUsr() {
+		return usr;
+	}
+	public void setUsr(String usr) {
+		this.usr = usr;
+	}
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", phone=" + phone + ", member="
+				+ member + ", admin=" + admin + ", pas=" + pas + ", usr=" + usr + "]";
+	}
+	public User(Long userId, String name, String email, int phone, boolean member, boolean admin, String pas,
+			String usr) {
+		super();
+		this.userId = userId;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.member = member;
+		this.admin = admin;
+		this.pas = pas;
+		this.usr = usr;
+	}
+	public User() {
+		super();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

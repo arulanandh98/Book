@@ -1,0 +1,21 @@
+package com.commerce.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.commerce.model.User;
+import com.commerce.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	
+	public User register(User info)
+	{
+		return userRepository.saveAndFlush(info);
+	}
+}

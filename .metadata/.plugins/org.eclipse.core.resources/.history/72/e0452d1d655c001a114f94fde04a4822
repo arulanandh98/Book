@@ -1,0 +1,10 @@
+package com.commerce.model;
+
+public class Cart {
+
+	
+	private Long userId;
+	private Long bookId;
+	private int itemQuantity;
+	
+}

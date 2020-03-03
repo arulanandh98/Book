@@ -1,0 +1,5 @@
+package com.commerce.controllers;
+
+public class PromotionController {
+
+}

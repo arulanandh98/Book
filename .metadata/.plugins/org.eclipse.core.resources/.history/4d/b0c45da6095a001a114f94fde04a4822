@@ -1,0 +1,5 @@
+ackage com.commerce.repository;
+
+public interface UserRepository {
+
+}

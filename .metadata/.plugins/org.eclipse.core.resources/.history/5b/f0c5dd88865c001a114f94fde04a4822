@@ -1,0 +1,23 @@
+package com.commerce.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.commerce.model.Promotion;
+import com.commerce.services.PromotionService;
+
+
+
+@RestController
+public class PromotionController {
+	
+	@Autowired
+	private PromotionService promotionService;
+	
+	
+	public Promotion addPromo(Promotion info)
+	{
+		return promotionService.addPromotion(info);
+	}
+
+}

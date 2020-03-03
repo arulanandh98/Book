@@ -1,0 +1,28 @@
+package com.commerce.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Service;
+
+
+import com.commerce.model.User;
+import com.commerce.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	
+	public User register(User info)
+	{
+		
+		return userRepository.saveAndFlush(info);
+	}
+	
+	public boolean login(String username,String password)
+	{
+		return userRepository.login(username, password);
+	}
+}

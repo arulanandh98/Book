@@ -1,0 +1,27 @@
+package com.commerce.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.commerce.model.Inventory;
+
+@Repository
+public interface InventoryRepository extends JpaRepository<Inventory, Long> {
+
+//	@Modifying
+//	@Query("update Inventory i set i.title = ?1, i.author =?2 , i.price=?3 where i.bookId=?4")
+//	void editBook(String title, String author, int price, Long bookId);
+
+//	@Modifying
+//	@Query("update Inventory i set i.title = ?1, i.author =?2 , i.price=?3, i.quantity=?4 where i.bookId=?5")
+//	void editBook(Inventory i);
+	
+	
+	@Modifying
+	@Query("update Inventory i set i.title = ?1 where i.bookId=?4")
+	void editBook(String title,Long bookId);
+	
+	
+}

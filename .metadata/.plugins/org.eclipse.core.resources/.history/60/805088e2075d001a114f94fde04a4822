@@ -1,0 +1,96 @@
+package com.commerce.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class User {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long userId;
+	private String name;
+	private String email;
+	private int phone;
+	private boolean member;
+	private boolean admin;
+	private String pas;
+	private String usr;
+	public Long getUserId() {
+		return userId;
+	}
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Long getPhone() {
+		return phone;
+	}
+	public void setPhone(Long phone) {
+		this.phone = phone;
+	}
+	public boolean isMember() {
+		return member;
+	}
+	public void setMember(boolean member) {
+		this.member = member;
+	}
+	public boolean isAdmin() {
+		return admin;
+	}
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", phone=" + phone + ", member="
+				+ member + ", admin=" + admin + ", password=" + password + ", username=" + username + "]";
+	}
+	public User(Long userId, String name, String email, Long phone, boolean member, boolean admin, String password,
+			String username) {
+		super();
+		this.userId = userId;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.member = member;
+		this.admin = admin;
+		this.password = password;
+		this.username = username;
+	}
+	public User() {
+		super();
+	}
+	
+	
+	
+	
+	
+	
+	
+}
